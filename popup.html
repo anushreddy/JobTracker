@@ -1,0 +1,58 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Job Application Tracker </title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+		height: auto;
+		width: 250px;
+		text-align: center;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    
+    <script src="popup.js"></script>
+	<script src="content.js"></script>
+	<script src="background.js"></script>
+  </head>
+  <body>
+  <div id="header">
+  <h3>Job Tracker</h3>
+  <p> Keep track of your jobs without getting lost</p> 
+  </div>
+<div id="status">
+
+</div>
+  <div id="content">
+    <table border="1" cellpadding="3" style="border-collapse:collapse;">
+      <tr>
+        <td nowrap>Job Title:</td>
+        <td align="right"><span id="jobtitle">N/A</span></td>
+      </tr>
+      <tr>
+        <td nowrap>Job Company:</td>
+        <td align="right"><span id="jobcompany">N/A</span></td>
+      </tr>
+      <tr>
+        <td nowrap>Job Location:</td>
+        <td align="right"><span id="joblocation">N/A</span></td>
+      </tr>
+    </table>
+  </div>
+  </body>
+</html>
+
