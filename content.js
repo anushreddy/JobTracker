@@ -18,4 +18,22 @@ var jobInfo = {
     // through the specified callback */
     sendResponse(jobInfo);
   }
+
+jobjson = JSON.stringify(jobInfo);
+console.log(jobjson);
+
+$.ajax({
+       type: "POST",
+       crossdomain: true,
+       dataType: 'json',
+       url: "https://localhost/chromeext/intro.php",
+       data: {job_data : jobjson},
+    });
 });
+
+
+/*var xhttp = new XMLHttpRequest();
+var url = "http://localhost/chromeext/intro.php";
+xhttp.open("GET",url,true);
+xhttp.send(jobInfo);
+*/
