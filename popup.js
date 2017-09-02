@@ -23,6 +23,7 @@ function setDOMInfo(jobInfo) {
 }
 window.addEventListener('DOMContentLoaded', function () {
   // ...query for the active tab...
+  //if(changeInfo.status === "complete"){
   chrome.tabs.query({
     active: true,
     currentWindow: true
@@ -41,4 +42,5 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   }
 )
+  
 });
